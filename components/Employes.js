@@ -16,6 +16,17 @@ const columns = [
     dataIndex: "#",
   },
   {
+    title: "",
+    dataIndex: "",
+    render: (value, record, rowIndex) => (
+      <Checkbox
+        onChange={() => {
+          console.log("");
+        }}
+      />
+    ),
+  },
+  {
     title: "FullName",
     dataIndex: "FullName",
   },
