@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Employes from "./Employes.js";
+import Transaction from "./Transaction.js";
 import { Button } from "antd";
 import antd from "antd";
 import { PlusOutlined, UpOutlined } from "@ant-design/icons";
@@ -53,7 +53,7 @@ function SlideNav(props) {
       case expenses === true:
         return (
           <>
-            <Employes />
+            <Transaction />
           </>
         );
         break;

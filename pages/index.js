@@ -11,20 +11,11 @@ import Filter from "../pages/Filter";
 
 const { SubMenu } = Menu;
 
-import Link from "next/link";
 import "../Styles/style.less";
-import SlideNav from "../components/SlideNav";
-import SideWindow from "../pages/SideWindow.js";
 import NavBar from "../components/NavBar";
 import { useState } from "react";
-import {} from "../components/Slidtable.js";
-import FilterButtons from "../components/carousel.js";
 import Slidtable from "../components/Slidtable";
-// const { Layout, Menu, Breadcrumb } = antd;
-// const { UserOutlined, LaptopOutlined, NotificationOutlined } = icons;
 
-// const { SubMenu } = Menu;
-// const { Header, Content, Footer, Sider } = Layout;
 const index = () => {
   const [show, setshow] = useState(false);
   const showProgrss = () => {

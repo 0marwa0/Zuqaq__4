@@ -1,7 +1,7 @@
 import { Button, Checkbox } from "antd";
 import antd from "antd";
 import { Typography } from "antd";
-import SidePuPop from "../components/sidePoup";
+import SidePuPop from "./sidePoup";
 const { Text } = Typography;
 import { PlusOutlined, UpOutlined } from "@ant-design/icons";
 import Title from "antd/lib/skeleton/Title";
@@ -154,13 +154,9 @@ const Employes = () => {
                   display: "flex",
 
                   color: "gray",
-                  //   padding: "0 20px",
                 },
-                // pageSizeOptions: ["10", "20", "50"],
 
                 showTotal: (total) => `View search for 1 from 2 search we got.`,
-
-                // showSizeChanger: true,
               }}
             />
           </Col>
