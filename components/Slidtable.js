@@ -4,7 +4,7 @@ import { Button } from "antd";
 import antd from "antd";
 import { PlusOutlined, UpOutlined } from "@ant-design/icons";
 const { Table, Card, Row, Col, Tag } = antd;
-
+import Expanses from "./Expanses"
 function SlideNav(props) {
   const [Trans, setTrans] = useState(false);
   const [purchase, setPurchase] = useState(false);
@@ -42,7 +42,7 @@ function SlideNav(props) {
   const Content = () => {
     switch (true) {
       case Trans === true:
-        return <p className="content">Transactions</p>;
+        return <Transaction/>;
         break;
       case purchase === true:
         return <p className="content">purchase</p>;
@@ -53,7 +53,7 @@ function SlideNav(props) {
       case expenses === true:
         return (
           <>
-            <Transaction />
+            <Expanses/>
           </>
         );
         break;
@@ -88,13 +88,20 @@ function SlideNav(props) {
               <p>Financial</p>
             </div>
 
-            <ul>
-              <li className="active">Transactions</li>
-              <li>Purchase orders</li>
-              <li>Expenses & Reports</li>
-              <li>Discouints</li>
-            </ul>
-          </div>
+      <ul>
+          <li onClick={showTran} className={Trans ? "active" : ""}>
+            Transactions
+          </li>
+          <li onClick={showPurchase} className={purchase ? "active" : ""}>
+            Purchase Orders
+          </li>
+          <li onClick={showExpenses} className={expenses ? "active" : ""}>
+            Expenses & Reports
+          </li>
+          <li onClick={showDiscounts} className={discounts ? "active" : ""}>
+            Discounts
+          </li>
+        </ul>      </div>
         </Col>
         <Col style={{ flex: "1 1 100%" }}>
           <Content />

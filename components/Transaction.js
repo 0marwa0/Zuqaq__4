@@ -107,7 +107,7 @@ const Employes = () => {
     console.log("showwho wofwo");
   };
   return (
-    <div className="content" style={{ marginLeft: "225px" }}>
+    <div className="content" >
       <div className="content_innefr">
         <Row
           style={{

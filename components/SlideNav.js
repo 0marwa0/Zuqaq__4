@@ -2,7 +2,7 @@ import { useState } from "react";
 import Expanses from "./Expanses.js";
 import { Button } from "antd";
 import { PlusOutlined, UpOutlined } from "@ant-design/icons";
-
+import Transaction from "./Transaction"
 function SlideNav(props) {
   const [Trans, setTrans] = useState(false);
   const [purchase, setPurchase] = useState(false);
@@ -40,7 +40,12 @@ function SlideNav(props) {
   const Content = () => {
     switch (true) {
       case Trans === true:
-        return <p className="content">Transactions</p>;
+        return
+
+        <Transaction/>
+          // <p className="content">
+//
+          // Transactions</p>;
         break;
       case purchase === true:
         return <p className="content">purchase</p>;
@@ -51,7 +56,7 @@ function SlideNav(props) {
       case expenses === true:
         return (
           <>
-            <Expanses />
+           <Expanses />
           </>
         );
         break;
